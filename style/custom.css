@@ -1,9 +1,12 @@
-
+.head{
+	position: relative;
+}
 .container{
 	max-width: 1170px;
 	padding: 0px 15px;
 	margin: 0px auto;
 	clear: both;
+	z-index: 1;
 	
 }
 .fr{
@@ -74,7 +77,7 @@ padding: 130px 0px 150px 0px;
 	border: 3px solid #fff;
 	padding: 40px 35px;
 }
-.span-1{
+.sp-1{
 	display: block;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: bold;
@@ -83,7 +86,7 @@ padding: 130px 0px 150px 0px;
 	font-size: 50px;
 	letter-spacing: 5px;
 }
-.span-2{
+.sp-2{
 	display: block;
 	font-family: 'Bringin', sans-serif;
 	font-size: 66px;
@@ -98,6 +101,7 @@ p.p-main{
 	font-size: 18px;
 	line-height: 29px;
 }
+
 .btn{
 	cursor: pointer;
 	border-radius: 4px;
@@ -108,20 +112,21 @@ p.p-main{
 }
 .btn-white{
 	font-family: 'Raleway', sans-serif;
-	letter-spacing: 2px;
-	font-size: 12px;
-	background: transparent;
-	color: #36aeea;
-	border: 3px solid #36aeea;
-	padding: auto 0px;
-	min-width: 145px;
-	height: 40px;
+    letter-spacing: 2px;
+    font-size: 12px;
+    background: transparent;
+    color: #36aeea;
+    border: 3px solid #36aeea;
+    min-width: 145px;
+    box-sizing: border-box;
+	max-height: 40px;
+	padding: 12px;
 	/*line-height: 40px;*/
 }
 .btn-white:hover{
 	background:  #36aeea;
 	color: #ffffff;
-	border: 3px solid transparent#36aeea;
+	border: 3px solid #36aeea;
 }
 .btn-white:active{
 	background: transparent;
@@ -161,4 +166,54 @@ p.p-main{
 	border: 3px solid transparent; 
 	box-shadow: 0 0 10px rgba(0, 0, 20, 0.50);
 }
+.popup-menu{
+	display: block;
+	z-index: 10;
+	width: 300px;
+	box-sizing: border-box;
+	height: 100vh;
+	background-color: #00517c77;
+	backdrop-filter: blur(25px);
+	color: rgb(255, 255, 255);
+	padding: 30px;
+	box-shadow: 0px 10px 20px 0px rgba(0, 63, 100, 0.582);
+	position: absolute;
+	transition: .5s all;
+	top: 0px;
+	left: -999px;
+}
+.left-menu{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+#ch-menu{
+	display: none;
+}
+#ch-menu:checked ~ .popup-menu{
+	left: 0;
+}
+
+#ch-menu:checked ~ .close{
+
+	display: block;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100vw;
+	height: 100vh;
+	margin-left: 0px;
+	z-index: 1;
+}
+
+.close {
+	display: none;
+}
+.backblur{
+	z-index: 11;
+	width: 100vw;
+	height: 100vh;
+	backdrop-filter: blur(5px);
+}
+
 /*end*/
