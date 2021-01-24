@@ -210,7 +210,6 @@ p.p-main{
 }
 
 #ch-menu:checked ~ .close{
-
 	display: block;
 	position: fixed;
 	left: 0px;
@@ -231,5 +230,11 @@ p.p-main{
 	-webkit-backdrop-filter: blur(5px);
 	        backdrop-filter: blur(5px);
 }
-
+/* ФИКС БЛУРА ДЛЯ IE */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.backblur  {background-color: rgba(232, 231, 235, 0.329);}
+ }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.popup-menu  {background-color:  #36aeea;
+ }
 /*end*/
