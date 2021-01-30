@@ -13,9 +13,14 @@
 	padding: 0px 15px;
 	margin: 0px auto;
 	clear: both;
-	z-index: 1;
-	
+	z-index: 2;
+	/* position: relative; */
 }
+/* .safezone{
+	box-sizing: border-box;
+	padding-left: calc(+20px);
+
+} */
 .fr{
 	float: right;
 }
@@ -149,13 +154,13 @@ p.p-main{
 .btn-blue{
 	font-family: 'Raleway', sans-serif;
 	letter-spacing: 2px;
-	min-height: 60px;
+	height: 60px;
 	background: #36aeea;
 	color: #fff;
 	border: 3px solid transparent; 
 	padding: 15px 0px;
 	margin-top: 30px;
-	min-width: 250px;
+	width: 250px;
 }
 .btn-blue:hover{
 	background: transparent;
@@ -176,6 +181,7 @@ p.p-main{
 	-webkit-box-shadow: 0 0 10px rgba(0, 0, 20, 0.50); 
 	        box-shadow: 0 0 10px rgba(0, 0, 20, 0.50);
 }
+/*end OF SECTION 1*/
 .popup-menu{
 	display: block;
 	z-index: 10;
@@ -190,17 +196,30 @@ p.p-main{
 	padding: 30px;
 	-webkit-box-shadow: 0px 10px 20px 0px rgba(0, 63, 100, 0.582);
 	        box-shadow: 0px 10px 20px 0px rgba(0, 63, 100, 0.582);
-	position: absolute;
+	position: fixed;
 	-webkit-transition: .5s all;
 	-o-transition: .5s all;
 	transition: .5s all;
 	top: 0px;
 	left: -999px;
 }
-.left-menu{
+.l-m-a{
+	display: block;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
-	font-family: 'Open Sans', sans-serif;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.l-m-a:hover{
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	font-size: 24px;
+	-webkit-transition: 100ms;
+	-o-transition: 100ms;
+	transition: 100ms;
+
 }
 #ch-menu{
 	display: none;
@@ -230,11 +249,132 @@ p.p-main{
 	-webkit-backdrop-filter: blur(5px);
 	        backdrop-filter: blur(5px);
 }
-/* ФИКС БЛУРА ДЛЯ IE */
+/* START SECTION 2 */
+.sec2{
+	background-color: #f6f4f4;
+	/* background: no-repeat, center/80%, url(../img/sec2bckgrnd.png) ; */
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	background-image: url(../img/sec2bckgrnd.png);
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: top 20px center;
+	background-size: 970px;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	max-height: 530px;
+	box-sizing: border-box;
+	min-height: 670px;
+	position: relative;
+	padding: 250px 0px 230px 0px;
+	/* content: url(../img/sec2bckgrnd.png);
+	z-index: 0; */
+
+	}
+/* .sec2::after{
+	content: url(../img/sec2bckgrnd.png);
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100px;
+	z-index: 12;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	max-height: 530px;
+	margin: 40px, 40px, 0,0;
+} */
+h3{
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #2c2e37;
+	font-size: 20px;
+	letter-spacing: 0.1em;
+}
+.p-left{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 500;
+	color: #949494;
+	font-size: 14px;
+}
+.text-bl1{
+	width: 360px;
+	line-height: 26px;
+	font-weight: bold;
+	margin-right: 10px;
+	margin-top: 25px;
+}
+.litl1{
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	letter-spacing: 2px;
+	height: 40px;
+	border: 3px solid transparent; 
+	font-size: 12px;
+	padding: 0px;
+	width: 130px;
+	margin-top: 25px;
+}
+.block2{
+	position: relative;
+	z-index: 0;
+}
+/* .bck-img{
+	box-sizing: border-box;
+	background-color: lightgreen;
+	background-image: url(../img/sec2bckgrnd.png);
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	max-height: 530px;
+} */
+/* .im-sec2{
+	width: 1000px;
+
+} */
+.sec2-img1{
+	display: block;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	z-index: -1;
+
+	position: absolute;
+	bottom: -190px;
+	left: 460px;
+
+}
+.sec2-img2{
+	display: block;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	width: 800px;
+	z-index: -2;
+	position: absolute;
+	left: 550px;
+	top: -280px;
+}
+/* .sec2::after{
+	content: url(../img/sec2bckgrnd.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+} */
+
+	/* ФИКС БЛУРА ДЛЯ IE */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	.backblur  {background-color: rgba(232, 231, 235, 0.329);}
  }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	.popup-menu  {background-color:  #36aeea;
  }
-/*end*/
+
+
+
